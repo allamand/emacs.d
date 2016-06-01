@@ -1,0 +1,20 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("pic"
+ (filename . "~/work/advise/Readme.md")
+ (front-context-string . "\n- `sonar` pour ")
+ (rear-context-string . "c3.s1.p.fti.net\n")
+ (position . 594))
+("of-docker-swarm"
+ (filename . "~/work/of-docker-swarm/README.md")
+ (front-context-string . "Docker Swarm\n===")
+ (rear-context-string)
+ (position . 1))
+("emacs"
+ (filename . "~/work/learning/emacs/Readme.md")
+ (front-context-string . "\n\n##Encoding sys")
+ (rear-context-string . "et` or `C-x r b`")
+ (position . 637))
+)
