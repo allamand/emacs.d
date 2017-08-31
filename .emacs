@@ -1,6 +1,4 @@
 
-(normal-erase-is-backspace-mode 0)
-
 (when (>= emacs-major-version 24)
   (require 'package)
   (add-to-list
@@ -24,7 +22,14 @@
  ;; If there is more than one, they won't work right.
  )
 
-
+;;#le erase-is-backspace est different en mode graphique ou en terminal
+(if (display-graphic-p)
+    (progn
+    ;; if graphic
+      (normal-erase-is-backspace-mode 1)
+    ;; else (optional)      
+      (normal-erase-is-backspace-mode 1)))
+      
 ;;bookmarks
 (setq bookmark-save-flag 1) ; everytime bookmark is changed, automatically save it
 
@@ -35,3 +40,48 @@
 (global-set-key (kbd "<C-down>") 'enlarge-window)
 (global-set-key (kbd "<C-left>") 'shrink-window-horizontally)
 (global-set-key (kbd "<C-right>") 'enlarge-window-horizontally)
+
+;; setup files ending in “.js” to open in js2-mode
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.puml\\'" . plantuml-mode))
+
+
+
+;;transparent
+
+(set-frame-parameter (selected-frame) 'alpha '(85 . 50))
+(add-to-list 'default-frame-alist '(alpha . (85 . 50)))
+
+ (defun toggle-transparency ()
+   (interactive)
+   (let ((alpha (frame-parameter nil 'alpha)))
+     (set-frame-parameter
+      nil 'alpha
+      (if (eql (cond ((numberp alpha) alpha)
+                     ((numberp (cdr alpha)) (cdr alpha))
+                     ;; Also handle undocumented (<active> <inactive>) form.
+                     ((numberp (cadr alpha)) (cadr alpha)))
+               100)
+          '(85 . 50) '(100 . 100)))))
+ (global-set-key (kbd "C-c t") 'toggle-transparency)
+
+ ;; Set transparency of emacs
+; (defun transparency (value)
+;   "Sets the transparency of the frame window. 0=transparent/100=opaque"
+;   (interactive "nTransparency Value 0 - 100 opaque:")
+;   (set-frame-parameter (selected-frame) 'alpha value))
+
+(set-frame-parameter (selected-frame) 'alpha '(85 50))
+
+;(custom-set-faces
+;     '(default ((t (:stipple nil :background ((image :type jpeg :file "/home/usso/Téléchargements/wallpaper-naruto.jpg") :origin display) :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 101 :width normal :family "misc-fixed")))))
+
+
+;default font
+;DejaVu Sans Mono:pixelsize=15:foundry=PfEd:weight=normal:slant=normal:width=normal:spacing=100:scalable=true
+;M-x describe-char					
+
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-10"))
+
+
+
