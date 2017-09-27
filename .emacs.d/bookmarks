@@ -2,18 +2,28 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("pic"
- (filename . "~/work/advise/Readme.md")
- (front-context-string . "\n- `sonar` pour ")
- (rear-context-string . "c3.s1.p.fti.net\n")
- (position . 594))
-("of-docker-swarm"
- (filename . "~/work/of-docker-swarm/README.md")
- (front-context-string . "Docker Swarm\n===")
+(("propositions.md"
+ (filename . "~/working/gitlab.pic/dfyarchicloud/sdfy-capacitaire/documents/etudes/advise-pns/propositions.md")
+ (front-context-string . "<small>\n\n# Solut")
  (rear-context-string)
  (position . 1))
+("demo-kompose"
+ (filename . "~/work/gitlab.pic/dfyarchicloud/demo-kompose/")
+ (front-context-string . "docker-guestbook")
+ (rear-context-string . " mai   30 10:11 ")
+ (position . 249))
+("20170807-gitlab-deploy-docker-swarm.md"
+ (filename . "~/working/gitlab.com/example-voting-app/docs/")
+ (front-context-string . "\n\nThe first thin")
+ (rear-context-string . " on Docker Swarm")
+ (position . 8944))
+("learning"
+ (filename . "~/work/gitlab.com/learning/")
+ (front-context-string . "mkdocs.yml\n  drw")
+ (rear-context-string . " août  28 10:50 ")
+ (position . 499))
 ("emacs"
- (filename . "~/work/learning/emacs/Readme.md")
+ (filename . "~/work/gitlab.com/learning/docs/emacs/Readme.md")
  (front-context-string . "\n\n##Encoding sys")
  (rear-context-string . "et` or `C-x r b`")
  (position . 637))
